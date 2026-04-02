@@ -75,6 +75,7 @@ Our architecture is split into four distinct logic blocks:
         FIREBASE_API_KEY=your_key_here
 
 5. Run the development servers:
+   
         # Terminal 1 (Frontend)
         npm start
    
