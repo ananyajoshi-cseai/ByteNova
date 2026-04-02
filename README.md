@@ -60,5 +60,31 @@ Our architecture is split into four distinct logic blocks:
 
 ### Installation
 1. Clone the repository:
-   ```bash
-   git clone [https://github.com/ananyajoshi-cseai/ByteNova.git](https://github.com/ananyajoshi-cseai/ByteNova.git)
+        git clone https://github.com/ananyajoshi-cseai/ByteNova.git
+
+2. Install frontend dependencies:
+        cd client
+        npm install
+
+3. Set up the Python AI Engine:
+        cd backend
+        pip install -r requirements.txt
+
+4. Create a .env file in the root directory and add your API Keys:
+        GEMINI_API_KEY=your_key_here
+        FIREBASE_API_KEY=your_key_here
+
+5. Run the development servers:
+        # Terminal 1 (Frontend)
+        npm start
+   
+        # Terminal 2 (Backend)
+        python app.py
+
+---
+
+## 👥 Meet Team ByteNova
+* **Ananya Joshi** - Intelligence Pipeline (Python), Database Architecture & AI Integration
+* **Gargi Sharma** - Mapping UI (React) & Database (Firebase)
+* **Anika Aggarwal** - Frontend Developer
+* **Aashi Srivastava** - Bug Testing, Documentation & Security
