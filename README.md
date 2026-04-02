@@ -41,13 +41,13 @@ AsarAI provides an immutable, trust-based ecosystem where you only get credit if
 ---
 
 ## 🛠️ The Tech Stack (ByteNova)
-Our architecture is split into four distinct logic blocks:
+
+Our architecture is split into distinct logic blocks:
+
 * **The Engine (Python)**: The "Intelligence Pipeline" using one API call to Gemini for translation, OCR, and urgency scoring.
-* **The Pulse (React)**: A live heatmap of Delhi showing "Impact Clusters".
+* **The Pulse (HTML/CSS)**: The frontend user interface for the Proof of Impact terminal and live heatmap of Delhi showing "Impact Clusters".
 * **The Logic (C++)**: Highly efficient logic block for the volunteer matching algorithm.
 * **The Vault (SQL/Firebase)**: Secure storage for volunteer "Trust Tokens" and reports.
-* **Blockchain (Polygon/Solana)**: Layer 2 integrations for gasless, high-speed token minting via Account Abstraction.
-
 ---
 
 ## 🚀 Getting Started (MVP Demo)
