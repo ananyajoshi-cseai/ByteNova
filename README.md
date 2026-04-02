@@ -53,7 +53,6 @@ Our architecture is split into four distinct logic blocks:
 ## 🚀 Getting Started (MVP Demo)
 
 ### Prerequisites
-* Node.js (v18+)
 * Python 3.10+
 * Google Gemini API Key
 * Firebase config file
