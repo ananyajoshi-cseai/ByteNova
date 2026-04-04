@@ -1,0 +1,375 @@
+
+body {
+    background-color: rgb(1, 6, 14);
+    margin: 0;
+}
+
+h1 {
+    color: aliceblue;
+    margin-left: 1.7em;
+    margin-top:3em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    
+/* The Gradient: White top to Cyan-Silver bottom */
+    background: linear-gradient(to bottom, #ffffff 40%, #4fd1c5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+    /* This makes the letters actually GLOW */
+    filter: drop-shadow(0 0 12px rgba(79, 209, 197, 0.5));
+}
+
+
+.material-symbols-outlined {
+    font-size: 2.5rem; 
+    vertical-align: middle;
+}
+p {
+    color: rgb(208, 218, 215);
+    background-color: rgb(39, 91, 73);
+    font-weight: 200;
+    border-radius: 1.2em;
+    display: inline-block;
+    margin-left: 4em;
+    padding: 0.5em;
+}
+
+.top {
+    color: azure;
+    height: 4em;
+    background-color: rgb(20, 34, 59);
+    border-bottom: 2px solid #4b4b6c; 
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1000;
+    gap: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.NavigationTab{
+    color:white;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+}
+.NavigationTab:hover{
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+}
+.NavigationTab a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+.NavigationTab {
+    /* 1. Remove padding from the div so the link can touch the edges */
+    padding: 0; 
+    display: flex;
+    overflow: hidden; /* Ensures the hover background doesn't spill out */
+}
+
+.NavigationTab a {
+    /* 2. Make the link fill the whole space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    /* 3. Move the padding here so the 'hitbox' is large */
+    padding: 0.5em 1em; 
+    
+    /* 4. Reset link styles */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 5. Move your hover effect to the link or keep it on the tab */
+.NavigationTab:hover {
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+}
+.UpperPart {
+    color: aliceblue;
+    display: flex;
+    margin-left: 2em;
+    font-size: 1.1em;
+    flex-wrap: nowrap;
+    margin-top: 2em
+}
+.UpperPart {
+    justify-content: flex-start; 
+    gap: 10px; 
+}
+.box {
+    height: 10em;
+    width: 10em;
+    background-color: rgb(9, 22, 40);
+    border-radius: 1em;
+    margin-left: 1em ;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 0.5em;
+    padding-top: 1.25em;
+    padding-left: 1em;
+    box-shadow: 0em 0.25em 0.5em rgb(83, 107, 161);
+    font-weight: 400;
+    padding: 0.7em;
+    text-align: center;
+    font-size: 1.1em;
+}
+
+.no {
+    color: white;
+    font-size: 3em;
+    font-weight: 400;
+    background-color: rgb(9, 22, 40);
+    text-align: center;
+    margin-top: 0.7em;
+}
+.box .material-symbols-outlined {
+    font-size: 1.7em;
+    margin-left: 0.2em;
+}
+
+.no1 {
+    font-weight: 400;
+    color: rgb(16, 185, 129);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    text-align: left;
+    margin-top: 0.7em;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 3em;
+}
+.no1 .material-symbols-outlined {
+    font-size: 1.2em; /* This makes it 20% larger than the 98.4% text */
+}
+
+.AiIndex {
+    height: 12em;
+    width: 21em;
+    border-radius: 1em;
+    margin-left: 1em ;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-right: 1.5em;
+    padding-top: 1.25em;
+    padding-left: 1em;
+    color: rgb(16, 185, 129);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+    box-shadow: 0em 0.25em 0.5em rgb(103, 156, 124); 
+}
+
+
+.green { color: rgb(16, 185, 129); }
+.yellow { color: rgb(250, 204, 21); }
+.purple { color: rgb(124, 58, 237); }
+.red { color: rgb(239, 68, 68); }
+.white { color: white; }
+.blue { color: rgb(62, 62, 237); }
+
+/* LOWERPART */
+.lowerpart {
+    color: aliceblue;
+    display: flex;
+    margin-left: 4em;
+    flex-wrap: nowrap;
+}
+
+.smartOp {
+    background: radial-gradient(circle at top left, rgb(13, 29, 49), rgb(5, 11, 20));
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: 50em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    color: aliceblue;
+    display: flex;
+    flex: 3;
+    border-radius: 1em;
+}
+
+
+.box1 {
+    background-color: rgb(9, 22, 40);
+    padding: 1em;
+    border-radius: 1em;
+    flex: 1.5;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: aliceblue;   
+    font-weight: 700;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(176, 219, 255, 0.3);
+    height: 4em;
+    margin: 0.5em;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.box2 {
+    background: rgba(125, 6, 36, 0.2); /* Transparent dark red */
+    border: 1px solid rgba(255, 50, 50, 0.5);
+    color: #ff9e9e;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    border-radius: 0.4em;
+    padding: 0.5em;
+    display: flex;
+    height: 2.5em;
+    margin: 2.3em 1em 0 1em;
+    font-size: 1.5em;
+    font-weight: 200;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.2);
+    animation: pulse-glow 2s infinite;
+}
+
+.box3 {
+    border-radius: 1em;
+    flex: 1;   
+    display: flex;
+    height: 4em;
+    padding: 0.5em;
+    margin: 3.5em;
+    font-size: 1em;
+    font-weight: 300;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2em; 
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.predictive {
+    border-radius: 1em;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(200, 255, 230); 
+    background: linear-gradient(90deg, #0bc083, #0b8a5f);
+    height: 4em;
+    box-shadow: 0 0 15px rgba(11, 192, 131, 0.4);
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+@keyframes pulse-glow {
+
+0% { box-shadow: 0 0 5px rgba(255, 50, 50, 0.2); border-color: rgba(255, 50, 50, 0.3); }
+
+50% { box-shadow: 0 0 20px rgba(255, 50, 50, 0.6); border-color: rgba(255, 50, 50, 0.8); }
+
+100% { box-shadow: 0 0 5px rgba(255, 50, 50, 0.2); border-color: rgba(255, 50, 50, 0.3); }
+
+} 
+.box:hover, .AiIndex:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+    box-shadow: 0em 0.5em 1em rgb(83, 107, 161);
+}
+.box {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px); /* This blurs whatever is behind the card */
+}
+.box:hover {
+    box-shadow: 0 0 20px rgba(83, 107, 161, 0.6);
+    transform: translateY(-3px);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.UpperPart, .lowerpart, .smartOp, .liveOp {
+    display: flex;
+    flex-wrap: wrap; 
+}
+.box2:active {
+    transform: scale(0.95);
+}
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+p { animation: pulse 2s infinite; }
+
+@media (max-width: 768px) {
+    .UpperPart, .lowerpart {
+        flex-direction: column;
+    }
+    .smartOp, .liveOp {
+        width: 100%;
+    }
+}
+.liveOp {
+    background-color: rgb(9, 22, 40);
+    width: 20%;
+    min-height: 100vh; 
+    margin: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    border-radius: 1em;
+}
+.liveIcon {
+    font-size: 2rem;
+    margin-top: 2px;            
+    display: inline-block;
+}
+.LiveOpHeading{
+    color: white;
+    margin: 1em;
+    font-size: 1.7em;
+    font-weight: 600;
+    display: flex;       
+    align-items: center; 
+    gap: 12px;
+
+}
+.status {
+    background-color: rgba(20, 35, 56, 0.6);
+    height: auto; 
+    width: auto;
+    margin: 0 1em 1em 1em; 
+    padding: 1.5em;       
+    border-radius: 12px;
+    box-shadow: 0em 0.25em 0.5em rgb(83, 107, 161);
+    display: flex;
+    flex-direction: column;
+    gap: 8px; 
+}
+.statusHeading{
+    font-size: 1em;
+    color: aliceblue;
+    justify-content: center;
+}
