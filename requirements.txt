@@ -1,1 +1,12 @@
+# Web Framework
+flask
 
+# AI & Intelligence (For Gemini API)
+google-generativeai
+
+# Backend & Database (For storing volunteer stats/tokens)
+firebase-admin
+python-dotenv
+
+# Image processing (Optional but helpful for evidence handling)
+Pillow
