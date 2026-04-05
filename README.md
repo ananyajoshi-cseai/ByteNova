@@ -85,6 +85,6 @@ Our architecture is split into distinct logic blocks:
 
 ## 👥 Meet Team ByteNova
 * **Ananya Joshi** - Intelligence Pipeline (Python), Database Architecture & AI Integration
-* **Gargi Sharma** - Mapping UI (React) & Database (Firebase)
+* **Gargi Sharma** - Mapping UI & Database (Firebase)
 * **Anika Aggarwal** - Frontend Developer
 * **Aashi Srivastava** - Bug Testing, Documentation & Security
