@@ -1,0 +1,369 @@
+body {
+    background-color: rgb(1, 6, 14);
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    color: white;
+}
+
+body {
+    background-color: rgb(1, 6, 14);
+    margin: 0;
+}
+.top {
+    color: azure;
+    height: 4em;
+    background-color: rgb(20, 34, 59);
+    border-bottom: 2px solid #4b4b6c; 
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1000;
+    gap: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.NavigationTab{
+    color:white;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+}
+.NavigationTab:hover{
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+}
+.NavigationTab a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+.NavigationTab {
+    /* 1. Remove padding from the div so the link can touch the edges */
+    padding: 0; 
+    display: flex;
+    overflow: hidden; /* Ensures the hover background doesn't spill out */
+}
+
+.NavigationTab a {
+    /* 2. Make the link fill the whole space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    /* 3. Move the padding here so the 'hitbox' is large */
+    padding: 0.5em 1em; 
+    
+    /* 4. Reset link styles */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 5. Move your hover effect to the link or keep it on the tab */
+.NavigationTab:hover {
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+}
+
+.hero-container {
+    text-align: center;
+    padding-top: 7em; 
+    padding-bottom: 1.2em;
+}
+
+.main-title {
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: white;
+    margin: 0;
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #4ade80, #2dd4bf);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: inline-block;
+}
+
+.sub-text {
+    color: rgba(255, 255, 255, 0.5); /* Dimmed white for elegance */
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+
+
+.donate-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(74, 222, 128, 0.6);
+}
+.cards{
+    display: flex;
+    margin-top: 1em;
+    justify-content: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding-right: 1em;
+    display: flex;
+    gap: 0.6em;
+}
+.card1{
+    display: flex;
+    flex-direction: column;
+    height: 29em;
+    width: 14em;
+    background: rgba(255, 255, 255, 0.05); /* Semi-transparent */
+    backdrop-filter: blur(12px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    margin-left: 2em;
+    border-radius: 1em;
+    margin-bottom: 1em;
+    align-items: center;
+    padding: 0.3em;
+    padding-bottom: 1.5em;
+}
+.card1:hover {
+    transform: translateY(-10px);
+    border-color: #4ade80; /* Glow green on hover */
+    box-shadow: 0 12px 40px rgba(74, 222, 128, 0.2);
+}
+.custom-upload{
+    display: block;
+
+    display: flex;
+    margin-top: 1.5em;
+    height: 10em;
+    width: 90%;
+    justify-content: center;
+    align-items:center;
+    overflow: hidden; 
+    position: relative;
+    border: 2px dashed rgba(255, 255, 255, 0.2) !important;
+    border-radius: 12px;
+    background: rgba(0,0,0,0.2);
+}
+.card-input{
+    margin-top: 1em;
+    border: 0.2em dashed black;
+    background: transparent;
+    color: #4ade80;
+    border: none !important;
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 10px;
+    height: 5em;
+    width: 95%;
+    resize: none;
+    padding: 0.5em 0.2em ;
+    font-size: 1.2em;
+     font-weight:800 ;
+}
+
+.card-line{
+    width: 80%;
+    color: black;
+    margin: 1em 0;
+    background: linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent);
+}
+.live{
+    margin-top: 0em;
+    margin-bottom: 0.5em;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+}
+.range{
+    accent-color: #22c55e;
+    margin-bottom: 0em;
+    margin-top: 0em;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+    background: #1a1a2e;
+}  
+.yellow{
+    color: rgb(197, 197, 13);
+    gap: 0.5em;
+
+}
+.badge-text {
+    font-weight: 800;
+    margin-left: 5px; 
+}
+.material-symbols-outlined.yellow {
+    vertical-align: -5px;
+}
+
+.Badge {
+    font-weight: 800 !important;
+}
+.drop-wrapper {
+    padding-right: 0em;
+    display: flex;
+    flex-direction: column;
+}
+.drop-image {
+    height: 10em;
+    width: 19em;
+    height: 10em;
+    background: rgba(255, 255, 255, 0.03); 
+    border: 2px dashed rgba(74, 222, 128, 0.3); /* Green dashed border */
+    border-radius: 1.25em;
+    margin-right: 2em;
+    display: flex;              
+    flex-direction: column;     
+    justify-content: center;  
+    align-items: center;        
+    text-align: center;
+    padding: 0.5em;
+}
+.drop-image:hover {
+    background: rgba(74, 222, 128, 0.05);
+    border-color: #4ade80;
+    cursor: pointer;
+}
+.white{
+    color: white;
+    font-size: 4em!important;
+    margin-bottom: 0.01em;
+}
+.main-section {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1.5em; /* pushes them apart neatly */
+    align-items: flex-start;
+    padding: 0 2em;
+    margin-top: 3em;
+}
+.rating {
+    display: flex;
+    gap: 1.5em;
+    justify-content: center;
+}
+
+.rating span {
+    font-size: 2em;
+    color: gold;
+    cursor: pointer;
+    
+}
+
+.item-description{
+    background: rgba(255, 255, 255, 0.05); /* Same as your cards */
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white; 
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 1.25em;
+    height: auto; 
+    width: 18em;
+    height: 18em;
+    width: 18em;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1em;
+    margin-left: 1em;
+}
+.item-description img{
+    height: 9em;
+    width: 100;
+
+    border-radius: 1.25em 1.25em 0 0;
+}
+.item-description div{
+    margin-left: 0.5em;
+    width: 90%;
+    font-weight: 600 !important;;
+    text-transform: uppercase;
+    font-size: 1em;
+    text-align: center;
+
+}
+.item-description hr{
+    width: 100%;
+}
+.title{
+    font-weight: 700 !important;;
+    font-size: 1.2em !important;
+    text-transform: uppercase;
+}
+.condition{
+    font-weight: 700 !important;;
+     text-transform: uppercase;
+}
+.Live-Updates{
+    height: 29em;
+    width: 24em;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0.7em;
+    background: linear-gradient(135deg, rgba(245, 87, 108, 0.1) 0%, rgba(240, 147, 251, 0.1) 100%);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: white;
+    border-radius: 1.25em;
+    box-shadow: 0 0 20px rgba(245, 87, 108, 0.2);
+    
+}
+.liveHeading{
+    font-size: 1.2em;
+    text-align: center;
+    font-weight:600;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(to right, #ff9a9e, #fecfef);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 800;
+}
+.updates{
+    font-weight: 500;
+    margin-left: 0;
+    font-size: 1.1em;
+    margin-top: 1em;
+}
+.JOURNEY{
+    font-size: 1.3em;
+    font-weight: 600;
+    text-align: center;
+
+}
+.update2{
+    margin-top: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+}
+.updates div {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.6em;
+    border-radius: 0.5em;
+    margin-bottom: 0.6em;
+    font-size: 0.9em;
+    border-left: 3px solid #4ade80;
+}
+.update2{
+
+    background: rgba(255, 255, 255, 0.05);
+    padding: 0.6em;
+    border-radius: 0.5em;
+    margin-bottom: 0.6em;
+    font-size: 0.9em;
+    border-left: 3px solid #cdde4a;
+
+}

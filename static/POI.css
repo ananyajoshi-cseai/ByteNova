@@ -1,0 +1,169 @@
+body {
+    background-color: rgb(1, 6, 14);
+    margin: 0;
+}
+.top {
+    color: azure;
+    height: 4em;
+    background-color: rgb(20, 34, 59);
+    border-bottom: 2px solid #4b4b6c; 
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index: 1000;
+    gap: 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+.NavigationTab{
+    color:white;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 0.5em 1em;
+    border-radius: 0.75em;
+}
+.NavigationTab:hover{
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+}
+.NavigationTab a{
+    text-decoration: none;
+    color: inherit;
+    width: 100%;
+    height: 100%;
+}
+.NavigationTab {
+    /* 1. Remove padding from the div so the link can touch the edges */
+    padding: 0; 
+    display: flex;
+    overflow: hidden; /* Ensures the hover background doesn't spill out */
+}
+
+.NavigationTab a {
+    /* 2. Make the link fill the whole space */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    
+    /* 3. Move the padding here so the 'hitbox' is large */
+    padding: 0.5em 1em; 
+    
+    /* 4. Reset link styles */
+    color: inherit;
+    text-decoration: none;
+}
+
+/* 5. Move your hover effect to the link or keep it on the tab */
+.NavigationTab:hover {
+    background-color: rgba(74, 222, 128, 0.1); 
+    color: #4ade80;
+    cursor: pointer;
+}
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 5em; 
+}
+h1{
+    color: white;
+    text-align: center;
+    font-weight: 600;
+    font-size: 2em;
+    margin-bottom: 0.1em;
+}
+.head2{
+    color: rgba(255, 255, 255, 0.649);
+    text-align: center;
+}
+.check-in{
+    justify-content: top;
+    display: flex;
+     width: 60em;
+    height: 30em;
+    margin: 3em auto;
+    width:60%;
+    background-color: rgb(11, 17, 33);
+    align-items: center;
+    border :0.2em solid rgb(31, 135, 99);
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    
+}
+.fingerprint{
+    color: rgb(159, 157, 157);
+    font-size: 7rem !important;
+    
+}
+.scan-ring {
+    width: 12em; 
+    height: 12em;
+    border-radius: 50%;
+    border: 0.2em dashed rgba(159, 157, 157, 0.3); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4em;
+
+}
+.text1{
+    color: white;
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    margin-top: 1em;
+}
+.text2{
+    color:rgba(255, 255, 255, 0.649);
+    font-weight: 400;
+    text-align: center;
+    margin: 0;
+    margin-top: 0.5em;
+}
+.Initialize_verification{
+    background-color: rgb(0, 168, 107);
+    color:rgb(11, 17, 33);
+    justify-content: center;
+    align-items: center;
+    padding: 0.8em 2em;
+    margin-top: 1.5em;
+    border-radius: 1em;
+    font-weight: 600;
+    font-size: 1em;
+    margin-bottom: 1em;
+}
+.Initialize_verification:hover{
+    box-shadow: 0 0 25px rgba(16, 185, 129, 0.5);
+}
+.Initialize_verification:hover {
+  background: rgba(16, 185, 129, 0.18);
+  border-color: rgba(16, 185, 129, 0.5);
+  transform: translateY(-1px);
+}
+.Initialize_verification {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(16, 185, 129, 0.12); 
+  color: #34d399;
+  padding: 0.6rem 1.4rem;
+  border-radius: 999px;
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  transition: all 0.25s ease;
+}
+.check-in a{
+    text-decoration: none;
+}
