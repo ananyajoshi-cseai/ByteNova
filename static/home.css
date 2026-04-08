@@ -1,0 +1,298 @@
+body {
+    background-color: rgb(1, 6, 14);
+    margin: 0;
+}
+
+h1 {
+    color: aliceblue;
+    margin-left: 1.7em;
+    margin-top: 3em;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.25em;
+    background: linear-gradient(to bottom, #ffffff 40%, #4fd1c5 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(79, 209, 197, 0.5));
+}
+
+p {
+    color: rgb(208, 218, 215);
+    background-color: rgb(39, 91, 73);
+    font-weight: 200;
+    border-radius: 1.2em;
+    display: inline-block;
+    margin-left: 4em;
+    padding: 0.5em;
+    animation: pulse 2s infinite;
+}
+
+.material-symbols-outlined {
+    font-size: 2.5rem;
+    vertical-align: middle;
+}
+
+.top {
+    color: azure;
+    height: 4em;
+    background-color: rgb(20, 34, 59);
+    border-bottom: 2px solid #4b4b6c;
+    backdrop-filter: blur(10px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+}
+
+.NavigationTab {
+    color: white;
+    font-weight: 500;
+    font-size: 1.2em;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 0.75em;
+    display: flex;
+    overflow: hidden;
+}
+
+.NavigationTab a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 0.5em 1em;
+    color: inherit;
+    text-decoration: none;
+}
+
+.NavigationTab:hover {
+    background-color: rgba(74, 222, 128, 0.1);
+    color: #4ade80;
+    cursor: pointer;
+    border: 1px solid rgba(74, 222, 128, 0.4);
+}
+
+.UpperPart {
+    color: aliceblue;
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3.5em;
+    margin-top: 2em;
+    font-size: 1.1em;
+    flex-wrap: nowrap;
+    gap: 10px;
+}
+
+.box, 
+.AiIndex {
+    height: auto;
+    min-width: 12em;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+    padding: 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+.box:hover, 
+.AiIndex:hover {
+    box-shadow: 0 0 20px rgba(83, 107, 161, 0.6);
+    transform: translateY(-3px);
+    cursor: pointer;
+}
+
+.box .material-symbols-outlined {
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+    opacity: 0.8;
+}
+
+.no, 
+.no1 {
+    font-size: 1.8rem !important;
+    background: transparent;
+    margin-top: 0.5em;
+    font-family: 'Orbitron', sans-serif;
+    color: #ffffff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.no1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: #4ade80;
+    text-shadow: 0 0 10px rgba(74, 222, 128, 0.5);
+}
+
+.no1 .material-symbols-outlined {
+    font-size: 1.2em;
+}
+
+.lowerpart {
+    color: aliceblue;
+    display: flex;
+    margin-left: 4em;
+    flex-wrap: nowrap;
+}
+
+.smartOp {
+    background: rgba(9, 22, 40, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1em;
+    flex: 3;
+    width: 80%;
+    height: 50em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    display: flex;
+}
+
+.box1 {
+    background-color: rgb(9, 22, 40);
+    padding: 1em;
+    border-radius: 1em;
+    flex: 1.5;
+    font-family: 'Segoe UI', Roboto, sans-serif;
+    color: aliceblue;
+    font-weight: 700;
+    font-size: 1.7em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(176, 219, 255, 0.3);
+    height: 4em;
+    margin: 0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box2 {
+    background: rgba(125, 6, 36, 0.2);
+    border: 1px solid rgba(255, 50, 50, 0.5);
+    color: #ff9e9e;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    border-radius: 0.4em;
+    padding: 0.5em;
+    display: flex;
+    height: 2.5em;
+    margin: 2.3em 1em 0 1em;
+    font-size: 1.4em;
+    font-weight: 200;
+    flex: 1;
+    justify-content: center;
+
+    text-align: center;
+    box-shadow: inset 0 0 15px rgba(255, 0, 0, 0.2);
+    animation: pulse-glow 2s infinite;
+}
+
+.box2:active {
+    transform: scale(0.95);
+}
+
+.box3 {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 2em;
+    flex: 1;
+    display: flex;
+    height: 4em;
+    padding: 0.5em;
+    margin: 3.5em;
+    font-size: 1em;
+    font-weight: 300;
+    justify-content: center;
+    align-items: center;
+    color: aliceblue;
+}
+
+.predictive {
+    color: rgb(200, 255, 230);
+    background: linear-gradient(90deg, #0bc083, #0b8a5f);
+    height: 4em;
+    box-shadow: 0 0 15px rgba(11, 192, 131, 0.4);
+    padding: 0.5em;
+    margin: 0.5em;
+    font-size: 1em;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s ease;
+}
+
+.liveOp {
+    background-color: rgb(9, 22, 40);
+    width: 20%;
+    min-height: 100vh;
+    margin: 2em;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.LiveOpHeading {
+    color: white;
+    margin: 1em;
+    font-size: 1.7em;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.liveIcon {
+    font-size: 2rem;
+}
+
+.status {
+    background: rgba(255, 255, 255, 0.03);
+    border-left: 4px solid transparent;
+    margin: 0 1em 1.2em 1em;
+    padding: 1.2em;
+    border-radius: 12px;
+    box-shadow: 0 0.25em 0.5em rgb(83, 107, 161);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transition: background 0.3s;
+}
+
+.statusHeading {
+    font-size: 1em;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.green { color: rgb(16, 185, 129); }
+.yellow { color: rgb(250, 204, 21); }
+.purple { color: rgb(124, 58, 237); }
+.red { color: rgb(239, 68, 68); }
+.white { color: white; }
+.blue { color: rgb(62, 62, 237); }
+
+@keyframes pulse-glow {
+    0% { box-shadow: 0 0 5px rgba(255, 50, 50, 0.2); border-color: rgba(255, 50, 50, 0.3); }
+    50% { box-shadow: 0 0 20px rgba(255, 50, 50, 0.6); border-color: rgba(255, 50, 50, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(255, 50, 50, 0.2); border-color: rgba(255, 50, 50, 0.6);}
+}
