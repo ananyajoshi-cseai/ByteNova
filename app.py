@@ -32,7 +32,7 @@ def verify_impact():
     # 2. Call Gemini API (Gargi can help tune this part later)
     # 3. Update Firebase
     
-    # For now, we just simulate a successful verification
+    # For now, we just simulate a successful verification!
     return redirect(url_for('verified'))
 
 @app.route('/verified')
