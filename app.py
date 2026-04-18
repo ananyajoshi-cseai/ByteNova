@@ -112,7 +112,7 @@ def upload_evidence():
             print(f"AI Processing Error: {e}")
             return jsonify({
                 "status": "error", 
-                "message": "Failed to extract insights.",
+                "message": f"Failed to extract insights. Reason: {str(e)}",
                 "insights": {"summary": "Error parsing file.", "confidence_score": "0.0%", "urgency": "WARNING"}
             }), 500
 
