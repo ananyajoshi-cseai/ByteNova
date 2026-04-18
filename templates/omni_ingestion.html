@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="omni_ingestion.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='omni_ingestion.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
 
 </head>
 <body>
     <div class="top">
-        <div class="NavigationTab"><a href="home.html">Home</a></div>
-        <div class=" NavigationTab"><a href="omni_ingestion.html">Omni- Ingestion AI</a></div>
-        <div class=" NavigationTab"><a href="POI.html">Proof of Impact</a></div>
-        <div class=" NavigationTab"><a href="volunteer.html">Impact Profile</a></div>
-        <div class=" NavigationTab"><a href="donation1.html">Donation</a></div>
-    </div>
+    <div class="NavigationTab"><a href="{{ url_for('home') }}">Home</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('omni_ingestion') }}">Omni- Ingestion AI</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('poi') }}">Proof of Impact</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('volunteer') }}">Impact Profile</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('donation') }}">Donation</a></div>
+</div>
         <h1>Omni-Ingestion Engine</h1>
         <p>Drop raw unstructured field data. Extract actionable intelligence instantly.</p>
         <div class="sbse-main">
@@ -31,17 +31,75 @@
             <div class="extract"> Extract Insights > </div>
         </div></div>
         <div class="second-dabba">
-            <div class="brain"><span class="material-symbols-outlined green ">network_intel_node</span> AI Structured Output 
-                <div class="percent">98.4%</div></div>
-                <div class="score">Confidence Score</div>
-        <div class="box4">
-            <div class="button1"><span class="material-symbols-outlined">
-warning
-</span> Pending Dashboard Sync</div>
-            <div class="button2">Broadcast to Dashboard</div>
-           
-        </div>
-        </div>
-        </div>
+    <div class="brain"><span class="material-symbols-outlined green">network_intel_node</span> AI Structured Output 
+        <div class="percent">--.-%</div>
+    </div>
+    <div class="score">Confidence Score</div>
+    
+    <div id="ai-summary" style="color: #94a3b8; text-align: center; padding: 1.5em; font-size: 1.1em; font-style: italic;">
+        Awaiting field data for extraction...
+    </div>
+
+    <div class="box4">
+        <input type="file" id="real-file-input" style="display: none;" accept="audio/*,image/*,.pdf">
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const uploadBox = document.querySelector('.box3');
+    const fileInput = document.getElementById('real-file-input');
+    const filenameDisplay = document.querySelector('.report'); // The div that says field_report_z7.wav
+    const aiScoreDisplay = document.querySelector('.percent'); // The div that says 98.4%
+
+    // 1. Click the box to trigger the hidden file selector
+    uploadBox.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // 2. When a file is selected, send it to the Flask server
+    fileInput.addEventListener('change', function() {
+        if (fileInput.files.length > 0) {
+            const file = fileInput.files[0];
+            filenameDisplay.innerText = "Uploading " + file.name + "...";
+            
+            // Prepare the file for sending (FormData mimics a real HTML form)
+            const formData = new FormData();
+            formData.append('evidence_file', file);
+
+            // Send to our Python backend
+            fetch('/api/upload-evidence', {
+    method: 'POST',
+    body: formData
+})
+.then(response => response.json())
+.then(data => {
+    if (data.status === "success") {
+        filenameDisplay.innerText = file.name; 
+        
+        // Update with REAL AI Data!
+        aiScoreDisplay.innerText = data.insights.confidence_score; 
+        document.getElementById('ai-summary').innerText = `"${data.insights.summary}" [URGENCY: ${data.insights.urgency}]`;
+        
+        // Change color based on urgency
+        if(data.insights.urgency === "CRITICAL") {
+            document.getElementById('ai-summary').style.color = "#ff3131";
+        } else if (data.insights.urgency === "WARNING") {
+            document.getElementById('ai-summary').style.color = "#ff5e00";
+        } else {
+            document.getElementById('ai-summary').style.color = "#4ade80";
+        }
+        
+    } else {
+        alert("Upload failed: " + data.message);
+        filenameDisplay.innerText = "Upload failed.";
+    }
+})
+            .catch(error => {
+                console.error("Error:", error);
+                filenameDisplay.innerText = "Connection error.";
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
