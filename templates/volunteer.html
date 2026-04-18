@@ -4,19 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="volunteer.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='volunteer.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 </head>
 <body>
     <div class="top">
-        <div class="NavigationTab"><a href="home.html">Home</a></div>
-        
-        <div class=" NavigationTab"><a href="omni_ingestion.html">Omni- Ingestion AI</a></div>
-        <div class=" NavigationTab"><a href="POI.html">Proof of Impact</a></div>
-        <div class=" NavigationTab"><a href="volunteer.html">Impact Profile</a></div>
-        <div class=" NavigationTab"><a href="donation1.html">Donation</a></div>
-    </div>
+    <div class="NavigationTab"><a href="{{ url_for('home') }}">Home</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('omni_ingestion') }}">Omni- Ingestion AI</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('poi') }}">Proof of Impact</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('volunteer') }}">Impact Profile</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('donation') }}">Donation</a></div>
+</div>
     <div class="container">
     <h1>Volunteer Reputation</h1>
     <p>Your verifiable impact, backed by zero knowledge proofs.</p>
