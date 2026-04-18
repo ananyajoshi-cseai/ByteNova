@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="donation1.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='donation1.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 
 </head>
 <body>
     <div class="top">
-        <div class="NavigationTab"><a href="home.html">Home</a></div>
-        <div class=" NavigationTab"><a href="omni_ingestion.html">Omni- Ingestion AI</a></div>
-        <div class=" NavigationTab"><a href="POI.html">Proof of Impact</a></div>
-        <div class=" NavigationTab"><a href="volunteer.html">Impact Profile</a></div>
-        <div class=" NavigationTab"><a href="donation1.html">Donation</a></div>
-    </div>
+    <div class="NavigationTab"><a href="{{ url_for('home') }}">Home</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('omni_ingestion') }}">Omni- Ingestion AI</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('poi') }}">Proof of Impact</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('volunteer') }}">Impact Profile</a></div>
+    <div class="NavigationTab"><a href="{{ url_for('donation') }}">Donation</a></div>
+</div>
     <div class="hero-container">
     <h1 class="main-title">Impactful <span class="gradient-text">Donations</span></h1>
     <p class="sub-text">Transparent Giving • Real-Time Tracking • Direct Impact</p>
@@ -23,7 +23,7 @@
     <div class="main-section">
     <div class="cards">
         <div class="card1">
-            <img src="image.png" class="custom-upload" id="drop-zone">
+            <img src="{{ url_for('static', filename='image.png') }}" class="custom-upload" id="drop-zone">
             <div class="card-input">500Rs= 1 Week of Clean Wtwer for 1 family </div>
             <hr class="card-line">
             <p class="live">Live progress tracker</p>
@@ -36,7 +36,7 @@
 </div>
         </div>
         <div class="card1">
-            <img src="image2.png" class="custom-upload" id="drop-zone">
+            <img src="{{ url_for('static', filename='image2.png') }}" class="custom-upload" id="drop-zone">
             <div class="card-input">1200rs= Complete Set of School Supplies for 2 kids</div>
             <hr class="card-line">
             <p class="live">Live progress tracker</p>
@@ -49,7 +49,7 @@
 </div>
         </div>
         <div class="card1">
-            <img src="image3.png" class="custom-upload" id="drop-zone">
+            <img src="{{ url_for('static', filename='image3.png') }}" class="custom-upload" id="drop-zone">
             <div class="card-input">800rs= Essential Medicines for Community Clinic</div>
             <hr class="card-line">
             <p class="live">Live progress tracker</p>
@@ -67,7 +67,7 @@
     <div style="color: aliceblue;">click or drag Image</div>
     </div>
     <div class="item-description">
-        <img src="OIP.jpg" alt="Mens Jacket">
+        <img src="{{ url_for('static', filename='OIP.jpg') }}" alt="Mens Jacket">
         <div class="title">Men's Winter Jacket</div>
         <hr>
         <div class="condition">Condition tagging</div>
@@ -96,6 +96,68 @@
         
     </div>
 </div>
+<input type="file" id="donation-file-input" accept="image/*" style="display: none;">
 
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const dropArea = document.querySelector('.drop-image');
+    const fileInput = document.getElementById('donation-file-input');
+    
+    // Elements to update on the card next to it
+    const previewImage = document.querySelector('.item-description img');
+    const itemTitle = document.querySelector('.item-description .title');
+    const conditionTag = document.querySelector('.item-description div:nth-of-type(4)'); // The "GOOD CONDITION" text
+    const detailsTag = document.querySelector('.item-description div:nth-of-type(5)'); // The "Pocket is present" text
+
+    // 1. Click the box to trigger the hidden file selector
+    dropArea.addEventListener('click', () => {
+        fileInput.click();
+    });
+
+    // 2. Handle the file when selected
+    fileInput.addEventListener('change', function() {
+        if (this.files && this.files[0]) {
+            const file = this.files[0];
+            
+            // Show a temporary "Loading" state
+            itemTitle.innerText = "Analyzing Item with AI...";
+            conditionTag.innerText = "Scanning...";
+            detailsTag.innerText = "Extracting tags...";
+            
+            // Show a local preview of the image immediately
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                previewImage.src = e.target.result;
+            }
+            reader.readAsDataURL(file);
+
+            // Send to Flask
+            const formData = new FormData();
+            formData.append('donation_image', file);
+
+            fetch('/api/upload-donation', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if(data.status === 'success') {
+                    // Update UI with Python's response
+                    itemTitle.innerText = "New Uploaded Item";
+                    conditionTag.innerText = data.ai_condition;
+                    detailsTag.innerText = data.ai_details;
+                    // Note: We are using the local preview image, but we could also use data.image_url
+                } else {
+                    alert("Upload failed: " + data.message);
+                }
+            })
+            .catch(error => {
+                console.error("Error:", error);
+                itemTitle.innerText = "Upload Error";
+            });
+        }
+    });
+});
+</script>
 </body>
 </html>
