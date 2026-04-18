@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='terminal_map.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
 </head>
 <body>
@@ -26,34 +28,8 @@
         <div class="AiIndex">AI TRUST INDEX<div class="no1">98.4%<span class="material-symbols-outlined green">verified_user</span></div></div>
     </div>
 <div class="lowerpart">
-    <div class="smartOp">
-        <div class="box1"><span class="material-symbols-outlined">map</span>SMART OPERATIONS MAPS</div>
-        <div class="box2">NEW ALERT SYNCED</div>
-        <div class="box3">
-            LIVE RADAR 
-            <div class="predictive">PREDICTIVE</div>
-        </div>
-    </div>
+    <div id="root" style="height: 500px; width: 100%;"></div>
+</div> 
 
-    <div class="liveOp">
-        <div class="LiveOpHeading">
-            <span class="material-symbols-outlined blue liveIcon">monitor_heart</span>
-            <span class="heading-text">Live Operations</span>
-        </div>
-
-        <div class="status">
-            <div class="statusHeading"><span class="material-symbols-outlined purple">token</span>You Earned PoI Token</div> 
-            <div class="detail">
-                <div class="detail1">CURRENT LOCATION</div>
-                <div class="detail2">JUST NOW</div>
-            </div>
-        </div>
-
-        <div class="status">
-            <div class="statusHeading"><span class="material-symbols-outlined red">bookmark_flag</span>System AI Flagged Critical situation</div>
-            <div class="detail">
-                <div class="detail1">SECTOR 4 CAMP</div>
-                <div class="detail2">JUST NOW</div>
-            </div>
-        </div>
-    </div> </div> 
+<script src="{{ url_for('static', filename='terminal_map.js') }}"></script>
+</body>
