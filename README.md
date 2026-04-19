@@ -1,9 +1,21 @@
+<div align="center">
+
 # 🌍 PulseNet: Proof of Impact (PoI) Terminal
 **By Team ByteNova | Google Solution Challenge 2026**
 
-PulseNet isn't just a dashboard; it's a Multi-Modal Intelligence Engine. Built to tackle UN SDG 2 (Zero Hunger) and structural inefficiencies in NGO operations, PulseNet acts as a "Digital Bridge" to turn unstructured chaos (voice, photos, paper) into structured action using the state-of-the-art **Gemini 2.5 Flash** multimodal model.
+[![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
+[![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)]()
+[![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)]()
+[![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)]()
+[![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)]()
 
-**🚀 Live MVP Demo:** [https://bytenova.onrender.com](https://bytenova.onrender.com)
+*PulseNet is a Multi-Modal Intelligence Engine built to tackle UN SDG 2 (Zero Hunger) by turning unstructured field chaos (voice, photos, paper) into structured action.*
+
+<br>
+
+[![Launch Live MVP Demo](https://img.shields.io/badge/🚀_Launch_Live_MVP_Demo-46E3B7?style=for-the-badge&logo=render&logoColor=black)](https://bytenova.onrender.com)
+
+</div>
 
 ---
 
@@ -20,6 +32,8 @@ PulseNet provides an immutable, trust-based ecosystem where you only get credit 
 
 ### ✨ Key Features
 
+> *[Insert Screenshot of Omni-Ingestion UI Here]*
+
 #### 🧠 Omni-Ingestion Engine (Multimodal AI)
 * **Audio Diaries**: Field workers record voice notes (Hinglish/Hindi). The Gemini AI instantly transcribes, translates, and extracts the core need, outputting a strict JSON format with an automated Urgency Score and Confidence Rating. 
 * **Context-Aware OCR**: Respects the "Paper Workflow" by allowing NGOs to snap photos of handwritten logs. The AI structurizes visual data into clean, audit-ready data streams.
@@ -29,6 +43,8 @@ PulseNet provides an immutable, trust-based ecosystem where you only get credit 
 * **Soulbound Tokens (SBT)**: We mint a permanent, non-transferable digital badge only when a volunteer's GPS matches the task location and the recipient scans their QR code. 
 * **Data-Backed Impact Certificate**: Generates certificates showing quantitative achievements (e.g., hours served) and verified skills.
 * **Automated Security Tier**: Integrates e-KYC to verify identities and scans Indian e-courts for past convictions to ensure community safety.
+
+> *[Insert Screenshot of Live Operations Heatmap Here]*
 
 #### 🗺️ Smart Operations & Live Mapping
 * **Live Operations Heatmap**: An interactive React-Leaflet dashboard that maps live incidents, critical zones, and operational nodes across the city in real-time.
