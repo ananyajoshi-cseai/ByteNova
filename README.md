@@ -32,21 +32,31 @@ PulseNet provides an immutable, trust-based ecosystem where you only get credit 
 
 ### ✨ Key Features
 
-> *[Insert Screenshot of Omni-Ingestion UI Here]*
-
 #### 🧠 Omni-Ingestion Engine (Multimodal AI)
+
+![Omni-Ingestion Engine](screenshots/omni-engine.jpg)
+
 * **Audio Diaries**: Field workers record voice notes (Hinglish/Hindi). The Gemini AI instantly transcribes, translates, and extracts the core need, outputting a strict JSON format with an automated Urgency Score and Confidence Rating. 
 * **Context-Aware OCR**: Respects the "Paper Workflow" by allowing NGOs to snap photos of handwritten logs. The AI structurizes visual data into clean, audit-ready data streams.
-* **Donation AI Tagging**: Upload a photo of a donated item, and the AI automatically inspects it, extracting the item type, condition, and specific details.
+
+#### 📦 Donation AI Tagging
+
+![Impactful Donations](screenshots/donation.jpg)
+
+* **Smart Inspection**: Upload a photo of a donated item, and the AI automatically inspects it, extracting the item type, condition, and specific details to maintain transparent giving.
 
 #### 🛡️ Proof of Impact (PoI) & Reputation Layer
+
+![Proof of Impact Terminal](screenshots/poi.jpg)
+
 * **Soulbound Tokens (SBT)**: We mint a permanent, non-transferable digital badge only when a volunteer's GPS matches the task location and the recipient scans their QR code. 
 * **Data-Backed Impact Certificate**: Generates certificates showing quantitative achievements (e.g., hours served) and verified skills.
 * **Automated Security Tier**: Integrates e-KYC to verify identities and scans Indian e-courts for past convictions to ensure community safety.
 
-> *[Insert Screenshot of Live Operations Heatmap Here]*
-
 #### 🗺️ Smart Operations & Live Mapping
+
+![Live Operations Dashboard](screenshots/dashboard%201.jpg)
+
 * **Live Operations Heatmap**: An interactive React-Leaflet dashboard that maps live incidents, critical zones, and operational nodes across the city in real-time.
 * **Smart Evidence Score**: AI cross-references visual data with location patterns to provide a proven "Urgency" rating. 
 * **Dynamic Standby Management**: Uses a 12-hour "Confirmation Pulse" to rank waitlisted volunteers by reliability and automatically reassign slots if a volunteer backs out.
