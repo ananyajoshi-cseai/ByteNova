@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🌍 PulseNet: Proof of Impact (PoI) Terminal
+# 🌍 AsarAI
 **By Team ByteNova | Google Solution Challenge 2026**
 
 [![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)]()
@@ -9,7 +9,7 @@
 [![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)]()
 [![Gemini](https://img.shields.io/badge/Google%20Gemini-8E75B2?style=for-the-badge&logo=googlebard&logoColor=white)]()
 
-*PulseNet is a Multi-Modal Intelligence Engine built to tackle UN SDG 2 (Zero Hunger) by turning unstructured field chaos (voice, photos, paper) into structured action.*
+*AsarAI is a Multi-Modal Intelligence Engine built to tackle UN SDG 2 (Zero Hunger) by turning unstructured field chaos (voice, photos, paper) into structured action.*
 
 <br>
 
