@@ -95,7 +95,7 @@ Our architecture is a sleek, monolithic full-stack application designed for maxi
    ```bash
    python app.py
 
-## 👥 Meet Team ByteNova
+## 👥 Meet Team ByteNova!
 * **Ananya Joshi** - Backend Architecture (Python/Flask), AI Integration (Gemini API), GitHub Version Control & Cloud Deployment (Render)
 * **Gargi Sharma** - Interactive Heatmap & Live Mapping UI (React-Leaflet)
 * **Anika Aggarwal** - Lead Frontend Developer (Core UI/UX & Primary Page Architecture)
